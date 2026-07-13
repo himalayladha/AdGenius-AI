@@ -16,79 +16,41 @@
 
 @layer base {
   :root {
-    --background: 6 6 6;
-    --surface: 16 16 16;
-    --surface-2: 24 24 24;
-    --border: 250 204 21 / 0.08;
-    --text-primary: 245 245 245;
-    --text-secondary: 160 160 160;
-    --accent-violet: 250 204 21; /* Tailwind yellow-400 */
-    --accent-purple: 245 158 11; /* Tailwind amber-500 */
-    --accent-blue: 217 119 6;    /* Tailwind amber-600 */
-    --accent-cyan: 254 240 138;   /* Tailwind yellow-200 */
+    --background: 0 0 0; /* Pure Black */
+    --surface: 0 0 0;    /* Pure Black */
+    --surface-2: 0 0 0;  /* Pure Black */
+    --border: 250 204 21 / 0.5;
+    --text-primary: 255 255 255; /* Pure White */
+    --text-secondary: 250 204 21; /* Pure Yellow */
+    --accent-violet: 250 204 21; /* Pure Yellow */
+    --accent-purple: 250 204 21;
+    --accent-blue: 250 204 21;
+    --accent-cyan: 250 204 21;
 
-    /* Theme opacity values (Dark mode) */
-    --theme-text-20: rgba(255, 255, 255, 0.2);
-    --theme-text-25: rgba(255, 255, 255, 0.25);
-    --theme-text-30: rgba(255, 255, 255, 0.3);
-    --theme-text-40: rgba(255, 255, 255, 0.4);
-    --theme-text-50: rgba(255, 255, 255, 0.5);
-    --theme-text-70: rgba(255, 255, 255, 0.7);
-    --theme-text-75: rgba(255, 255, 255, 0.75);
-    --theme-text-90: rgba(255, 255, 255, 0.9);
-    --theme-border-06: rgba(255, 255, 255, 0.06);
-    --theme-border-08: rgba(255, 255, 255, 0.08);
-    --theme-bg-04: rgba(255, 255, 255, 0.04);
+    /* Theme opacity values (Solid Pure White/Yellow) */
+    --theme-text-20: rgba(255, 255, 255, 1);
+    --theme-text-25: rgba(255, 255, 255, 1);
+    --theme-text-30: rgba(255, 255, 255, 1);
+    --theme-text-40: rgba(255, 255, 255, 1);
+    --theme-text-50: rgba(255, 255, 255, 1);
+    --theme-text-70: rgba(255, 255, 255, 1);
+    --theme-text-75: rgba(255, 255, 255, 1);
+    --theme-text-90: rgba(255, 255, 255, 1);
+    --theme-border-06: rgba(250, 204, 21, 0.4);
+    --theme-border-08: rgba(250, 204, 21, 0.6);
+    --theme-bg-04: rgba(0, 0, 0, 1);
 
-    --theme-label-color: rgba(255, 255, 255, 0.75);
-    --theme-placeholder-color: rgba(255, 255, 255, 0.4);
+    --theme-label-color: rgba(255, 255, 255, 1);
+    --theme-placeholder-color: rgba(255, 255, 255, 0.5);
 
-    /* Glass components (Dark mode) */
-    --theme-glass-bg: rgba(255, 255, 255, 0.02);
-    --theme-glass-border: rgba(250, 204, 21, 0.06);
-    --theme-glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
+    /* Solid components */
+    --theme-glass-bg: rgba(0, 0, 0, 1);
+    --theme-glass-border: rgba(250, 204, 21, 1);
+    --theme-glass-shadow: none;
 
-    /* Concept Card (Dark mode) */
-    --theme-card-bg: rgba(255, 255, 255, 0.025);
-    --theme-card-border: rgba(255, 255, 255, 0.07);
-  }
-
-  :root[data-theme='light'] {
-    --background: 246 247 249;
-    --surface: 255 255 255;
-    --surface-2: 236 238 243;
-    --border: 202 138 4 / 0.12;
-    --text-primary: 22 22 25;
-    --text-secondary: 90 90 105;
-    --accent-violet: 217 119 6;  /* Tailwind amber-600/gold for light background contrast */
-    --accent-purple: 245 158 11; /* Tailwind amber-500 */
-    --accent-blue: 202 138 4;    /* Tailwind yellow-600 */
-    --accent-cyan: 234 179 8;    /* Tailwind yellow-500 */
-
-    /* Theme opacity values (Light mode) */
-    --theme-text-20: rgba(22, 22, 25, 0.35);
-    --theme-text-25: rgba(22, 22, 25, 0.45);
-    --theme-text-30: rgba(22, 22, 25, 0.55);
-    --theme-text-40: rgba(22, 22, 25, 0.65);
-    --theme-text-50: rgba(22, 22, 25, 0.72);
-    --theme-text-70: rgba(22, 22, 25, 0.82);
-    --theme-text-75: rgba(22, 22, 25, 0.86);
-    --theme-text-90: rgba(22, 22, 25, 0.95);
-    --theme-border-06: rgba(22, 22, 25, 0.08);
-    --theme-border-08: rgba(22, 22, 25, 0.1);
-    --theme-bg-04: rgba(22, 22, 25, 0.05);
-
-    --theme-label-color: rgba(22, 22, 25, 0.86);
-    --theme-placeholder-color: rgba(22, 22, 25, 0.5);
-
-    /* Glass components (Light mode) */
-    --theme-glass-bg: rgba(255, 255, 255, 0.75);
-    --theme-glass-border: rgba(202, 138, 4, 0.15);
-    --theme-glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
-
-    /* Concept Card (Light mode) */
-    --theme-card-bg: rgba(255, 255, 255, 0.65);
-    --theme-card-border: rgba(0, 0, 0, 0.08);
+    /* Concept Card */
+    --theme-card-bg: rgba(0, 0, 0, 1);
+    --theme-card-border: rgba(250, 204, 21, 0.4);
   }
 }
 
@@ -109,11 +71,6 @@
     font-family: var(--font-inter), system-ui, sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  body *, header, footer, .glass, .concept-card, .btn-ghost, .btn-primary, .input-field {
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   }
 
   /* Scrollbar */
@@ -124,11 +81,11 @@
     background: rgb(var(--background));
   }
   ::-webkit-scrollbar-thumb {
-    background: rgb(var(--accent-violet) / 0.4);
+    background: rgb(var(--accent-violet));
     border-radius: 3px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: rgb(var(--accent-violet) / 0.7);
+    background: rgb(var(--accent-violet));
   }
 }
 
@@ -173,23 +130,21 @@
 /* ─── Input Styles ────────────────────────────────── */
 .input-field {
   width: 100%;
-  background: var(--theme-bg-04);
-  border: 1px solid var(--theme-border-08);
+  background: #000000;
+  border: 1px solid #ffffff;
   border-radius: 10px;
   padding: 10px 14px;
-  color: rgb(var(--text-primary));
+  color: #ffffff;
   font-size: 0.9rem;
   font-family: var(--font-inter), sans-serif;
-  transition: all 0.2s ease;
   outline: none;
   -webkit-appearance: none;
   appearance: none;
 }
 
 .input-field:focus {
-  border-color: rgb(var(--accent-violet) / 0.5);
-  background: rgb(var(--accent-violet) / 0.04);
-  box-shadow: 0 0 0 3px rgb(var(--accent-violet) / 0.1);
+  border-color: rgb(var(--accent-violet));
+  background: #000000;
 }
 
 .input-field::placeholder {
@@ -197,8 +152,8 @@
 }
 
 .input-field option {
-  background: rgb(var(--surface));
-  color: rgb(var(--text-primary));
+  background: #000000;
+  color: #ffffff;
 }
 
 /* ─── Button Styles ───────────────────────────────── */
@@ -216,19 +171,18 @@
   font-weight: 700;
   font-family: var(--font-space-grotesk), sans-serif;
   cursor: pointer;
-  transition: background-color 0.2s ease;
   letter-spacing: 0.01em;
 }
 
 .btn-primary:hover:not(:disabled) {
-  background: rgb(var(--accent-purple));
+  background: #ffffff;
 }
 
 .btn-primary:disabled {
-  background: var(--theme-bg-04);
-  border: 1px solid var(--theme-border-08);
-  color: var(--theme-text-30);
-  opacity: 0.75;
+  background: #000000;
+  border: 1px solid rgb(var(--accent-violet));
+  color: rgb(var(--accent-violet));
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
@@ -243,20 +197,19 @@
   justify-content: center;
   gap: 6px;
   padding: 7px 14px;
-  background: var(--theme-bg-04);
-  border: 1px solid var(--theme-border-08);
+  background: #000000;
+  border: 1px solid #ffffff;
   border-radius: 8px;
-  color: rgb(var(--text-secondary));
+  color: #ffffff;
   font-size: 0.82rem;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s ease;
 }
 
 .btn-ghost:hover:not(:disabled) {
-  background: rgb(var(--accent-violet) / 0.12);
-  border-color: rgb(var(--accent-violet) / 0.3);
-  color: rgb(var(--text-primary));
+  background: rgb(var(--accent-violet));
+  border-color: rgb(var(--accent-violet));
+  color: #000000;
 }
 
 .btn-ghost:disabled {
@@ -269,7 +222,7 @@
   display: block;
   font-size: 0.8rem;
   font-weight: 500;
-  color: var(--theme-text-75);
+  color: #ffffff;
   margin-bottom: 6px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -284,6 +237,7 @@
   border-radius: 9999px;
   font-size: 0.72rem;
   font-weight: 600;
+  color: rgb(var(--accent-violet));
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }

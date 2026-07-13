@@ -1,14 +1,13 @@
 import AdConceptGenerator from "@/components/AdConceptGenerator";
-import ThemeToggle from "@/components/ThemeToggle";
 import { Sparkles, BookOpen, Award } from "lucide-react";
 
 const TEMPLATE_PILLS = [
-  { name: "Pictorial Analogy", styles: "bg-yellow-400/10 dark:bg-yellow-400/5 border-yellow-500/20 text-yellow-700 dark:text-yellow-300" },
-  { name: "Extreme Situation", styles: "bg-amber-400/10 dark:bg-amber-400/5 border-amber-400/20 text-amber-700 dark:text-amber-300" },
-  { name: "Consequences", styles: "bg-yellow-500/10 dark:bg-yellow-500/5 border-yellow-500/20 text-yellow-800 dark:text-yellow-400" },
-  { name: "Competition", styles: "bg-amber-500/10 dark:bg-amber-500/5 border-amber-500/20 text-amber-800 dark:text-amber-400" },
-  { name: "Interactive Experiment", styles: "bg-yellow-400/10 dark:bg-yellow-400/5 border-yellow-500/20 text-yellow-700 dark:text-yellow-300" },
-  { name: "Dimensionality Alteration", styles: "bg-amber-400/10 dark:bg-amber-400/5 border-amber-500/20 text-amber-700 dark:text-amber-300" },
+  { name: "Pictorial Analogy", styles: "bg-black border border-yellow-500 text-yellow-500" },
+  { name: "Extreme Situation", styles: "bg-black border border-yellow-500 text-yellow-500" },
+  { name: "Consequences", styles: "bg-black border border-yellow-500 text-yellow-500" },
+  { name: "Competition", styles: "bg-black border border-yellow-500 text-yellow-500" },
+  { name: "Interactive Experiment", styles: "bg-black border border-yellow-500 text-yellow-500" },
+  { name: "Dimensionality Alteration", styles: "bg-black border border-yellow-500 text-yellow-500" },
 ];
 
 export default function Home() {
@@ -19,22 +18,21 @@ export default function Home() {
 
       <div className="relative z-10 min-h-screen flex flex-col">
         {/* ─── Header ─────────────────────────────── */}
-        <header className="sticky top-0 z-50 border-b border-theme-border-08 bg-[rgb(var(--surface))]">
+        <header className="sticky top-0 z-50 border-b border-theme-border-08 bg-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-lg bg-yellow-400 flex items-center justify-center">
                 <Sparkles size={16} className="text-black font-bold" />
               </div>
-              <span className="text-lg font-bold font-[var(--font-space-grotesk)] gradient-text">
+              <span className="text-lg font-bold font-[var(--font-space-grotesk)] text-yellow-400">
                 AdGenius AI
               </span>
             </div>
             <div className="flex items-center gap-4">
-              <div className="hidden sm:flex items-center gap-2 text-xs text-theme-text-30">
-                <Award size={12} />
+              <div className="hidden sm:flex items-center gap-2 text-xs text-white">
+                <Award size={12} className="text-yellow-400" />
                 Based on Goldenberg, Mazursky & Solomon (1999)
               </div>
-              <ThemeToggle />
             </div>
           </div>
         </header>

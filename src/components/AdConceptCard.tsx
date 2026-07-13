@@ -14,11 +14,11 @@ type Props = {
 
 const TEMPLATE_SOLID_COLORS: Record<string, string> = {
   pictorial_analogy: 'bg-yellow-400',
-  extreme_situation: 'bg-amber-500',
-  consequences: 'bg-yellow-500',
-  competition: 'bg-amber-400',
-  interactive_experiment: 'bg-yellow-300',
-  dimensionality_alteration: 'bg-amber-600',
+  extreme_situation: 'bg-yellow-400',
+  consequences: 'bg-yellow-400',
+  competition: 'bg-yellow-400',
+  interactive_experiment: 'bg-yellow-400',
+  dimensionality_alteration: 'bg-yellow-400',
 };
 
 function CopyButton({ text, label }: { text: string; label: string }) {
