@@ -40,6 +40,9 @@
     --theme-border-08: rgba(255, 255, 255, 0.08);
     --theme-bg-04: rgba(255, 255, 255, 0.04);
 
+    --theme-label-color: rgba(255, 255, 255, 0.75);
+    --theme-placeholder-color: rgba(255, 255, 255, 0.4);
+
     /* Glass components (Dark mode) */
     --theme-glass-bg: rgba(255, 255, 255, 0.02);
     --theme-glass-border: rgba(250, 204, 21, 0.06);
@@ -56,24 +59,27 @@
     --surface-2: 236 238 243;
     --border: 202 138 4 / 0.12;
     --text-primary: 22 22 25;
-    --text-secondary: 100 100 115;
+    --text-secondary: 90 90 105;
     --accent-violet: 217 119 6;  /* Tailwind amber-600/gold for light background contrast */
     --accent-purple: 245 158 11; /* Tailwind amber-500 */
     --accent-blue: 202 138 4;    /* Tailwind yellow-600 */
     --accent-cyan: 234 179 8;    /* Tailwind yellow-500 */
 
     /* Theme opacity values (Light mode) */
-    --theme-text-20: rgba(15, 15, 20, 0.25);
-    --theme-text-25: rgba(15, 15, 20, 0.32);
-    --theme-text-30: rgba(15, 15, 20, 0.4);
-    --theme-text-40: rgba(15, 15, 20, 0.5);
-    --theme-text-50: rgba(15, 15, 20, 0.6);
-    --theme-text-70: rgba(15, 15, 20, 0.75);
-    --theme-text-75: rgba(15, 15, 20, 0.8);
-    --theme-text-90: rgba(15, 15, 20, 0.92);
-    --theme-border-06: rgba(15, 15, 20, 0.08);
-    --theme-border-08: rgba(15, 15, 20, 0.1);
-    --theme-bg-04: rgba(15, 15, 20, 0.05);
+    --theme-text-20: rgba(22, 22, 25, 0.35);
+    --theme-text-25: rgba(22, 22, 25, 0.45);
+    --theme-text-30: rgba(22, 22, 25, 0.55);
+    --theme-text-40: rgba(22, 22, 25, 0.65);
+    --theme-text-50: rgba(22, 22, 25, 0.72);
+    --theme-text-70: rgba(22, 22, 25, 0.82);
+    --theme-text-75: rgba(22, 22, 25, 0.86);
+    --theme-text-90: rgba(22, 22, 25, 0.95);
+    --theme-border-06: rgba(22, 22, 25, 0.08);
+    --theme-border-08: rgba(22, 22, 25, 0.1);
+    --theme-bg-04: rgba(22, 22, 25, 0.05);
+
+    --theme-label-color: rgba(22, 22, 25, 0.86);
+    --theme-placeholder-color: rgba(22, 22, 25, 0.5);
 
     /* Glass components (Light mode) */
     --theme-glass-bg: rgba(255, 255, 255, 0.75);
@@ -187,7 +193,7 @@
 }
 
 .input-field::placeholder {
-  color: var(--theme-text-40);
+  color: var(--theme-placeholder-color);
 }
 
 .input-field option {
@@ -219,7 +225,10 @@
 }
 
 .btn-primary:disabled {
-  opacity: 0.5;
+  background: var(--theme-bg-04);
+  border: 1px solid var(--theme-border-08);
+  color: var(--theme-text-30);
+  opacity: 0.75;
   cursor: not-allowed;
 }
 
