@@ -12,22 +12,13 @@ type Props = {
   icon: React.ElementType;
 };
 
-const TEMPLATE_GRADIENTS: Record<string, string> = {
-  pictorial_analogy: 'from-yellow-300 to-amber-500',
-  extreme_situation: 'from-amber-400 to-yellow-600',
-  consequences: 'from-yellow-500 to-amber-700',
-  competition: 'from-amber-300 to-yellow-500',
-  interactive_experiment: 'from-yellow-400 to-amber-600',
-  dimensionality_alteration: 'from-amber-500 to-yellow-700',
-};
-
-const TEMPLATE_BG_GLOW: Record<string, string> = {
-  pictorial_analogy: 'rgba(253,224,71,0.05)',
-  extreme_situation: 'rgba(245,158,11,0.05)',
-  consequences: 'rgba(234,179,8,0.05)',
-  competition: 'rgba(252,211,77,0.05)',
-  interactive_experiment: 'rgba(250,204,21,0.05)',
-  dimensionality_alteration: 'rgba(217,119,6,0.05)',
+const TEMPLATE_SOLID_COLORS: Record<string, string> = {
+  pictorial_analogy: 'bg-yellow-400',
+  extreme_situation: 'bg-amber-500',
+  consequences: 'bg-yellow-500',
+  competition: 'bg-amber-400',
+  interactive_experiment: 'bg-yellow-300',
+  dimensionality_alteration: 'bg-amber-600',
 };
 
 function CopyButton({ text, label }: { text: string; label: string }) {
@@ -73,8 +64,6 @@ export default function AdConceptCard({ concept, formData, onRegenerate, icon: I
   const [showDescription, setShowDescription] = useState(false);
 
   const template = TEMPLATES.find((t) => t.key === concept.templateKey);
-  const gradient = TEMPLATE_GRADIENTS[concept.templateKey] ?? 'from-yellow-300 to-amber-500';
-  const bgGlow = TEMPLATE_BG_GLOW[concept.templateKey] ?? 'rgba(250,204,21,0.05)';
 
   const handleRegenerate = useCallback(async () => {
     setIsRegenerating(true);
@@ -101,15 +90,12 @@ export default function AdConceptCard({ concept, formData, onRegenerate, icon: I
   ].join('\n');
 
   return (
-    <div
-      className="concept-card h-full flex flex-col"
-      style={{ background: `linear-gradient(145deg, ${bgGlow}, rgba(255,255,255,0.015))` }}
-    >
+    <div className="concept-card h-full flex flex-col">
       {/* Header */}
       <div className="flex items-start justify-between mb-5">
         <div className="flex items-center gap-3">
-          <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${gradient} flex items-center justify-center flex-shrink-0 shadow-lg`}>
-            <Icon size={18} className="text-black font-semibold" />
+          <div className={`w-10 h-10 rounded-xl ${TEMPLATE_SOLID_COLORS[concept.templateKey] ?? 'bg-yellow-400'} flex items-center justify-center flex-shrink-0`}>
+            <Icon size={18} className="text-black font-bold" />
           </div>
           <div>
             <p className="text-[10px] font-semibold uppercase tracking-widest text-theme-text-30">Template</p>

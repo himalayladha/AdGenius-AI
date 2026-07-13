@@ -19,11 +19,11 @@ export default function Home() {
 
       <div className="relative z-10 min-h-screen flex flex-col">
         {/* ─── Header ─────────────────────────────── */}
-        <header className="sticky top-0 z-50 border-b border-theme-border-06 backdrop-blur-xl bg-black/10">
+        <header className="sticky top-0 z-50 border-b border-theme-border-08 bg-[rgb(var(--surface))]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center">
-                <Sparkles size={16} className="text-black font-semibold" />
+              <div className="w-8 h-8 rounded-lg bg-yellow-400 flex items-center justify-center">
+                <Sparkles size={16} className="text-black font-bold" />
               </div>
               <span className="text-lg font-bold font-[var(--font-space-grotesk)] gradient-text">
                 AdGenius AI
