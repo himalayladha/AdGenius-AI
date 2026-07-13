@@ -71,7 +71,7 @@ function TypewriterLoader() {
           {typed}
           <span className="typewriter-cursor" />
         </p>
-        <p className="text-sm text-white/30 mt-2">Generating 6 template concepts in parallel</p>
+        <p className="text-sm text-theme-text-30 mt-2">Generating 6 template concepts in parallel</p>
       </div>
 
       {/* Template progress indicators */}
@@ -82,7 +82,7 @@ function TypewriterLoader() {
             className="w-9 h-9 rounded-lg glass flex items-center justify-center pulse-glow"
             style={{ animationDelay: `${i * 0.2}s` }}
           >
-            <Icon size={16} className="text-white/40" />
+            <Icon size={16} className="text-theme-text-40" />
           </div>
         ))}
       </div>
@@ -175,7 +175,7 @@ export default function AdConceptGenerator() {
           <h2 className="text-xl font-bold mt-3 font-[var(--font-space-grotesk)]">
             Describe Your Product
           </h2>
-          <p className="text-sm text-white/40 mt-1">
+          <p className="text-sm text-theme-text-40 mt-1">
             The AI will apply each of the 6 creativity templates to generate unique ad concepts.
           </p>
         </div>
@@ -258,11 +258,11 @@ export default function AdConceptGenerator() {
             <button
               type="button"
               onClick={() => setAdvancedOpen((o) => !o)}
-              className="flex items-center gap-2 text-sm text-white/40 hover:text-white/70 transition-colors"
+              className="flex items-center gap-2 text-sm text-theme-text-40 hover:text-theme-text-70 transition-colors"
             >
               {advancedOpen ? <ChevronUp size={15} /> : <ChevronDown size={15} />}
               Advanced Options
-              <span className="text-xs text-white/25">(optional)</span>
+              <span className="text-xs text-theme-text-25">(optional)</span>
             </button>
 
             <div className={`collapsible-content ${advancedOpen ? 'open' : 'closed'}`}>
@@ -309,7 +309,7 @@ export default function AdConceptGenerator() {
 
           {/* Submit */}
           <div className="flex items-center justify-between pt-2">
-            <p className="text-xs text-white/25">
+            <p className="text-xs text-theme-text-25">
               Generates 6 concepts · ~10–20s
             </p>
             <button
@@ -360,7 +360,7 @@ export default function AdConceptGenerator() {
               <Sparkles size={11} />
               Results
             </span>
-            <p className="text-sm text-white/40">
+            <p className="text-sm text-theme-text-40">
               {concepts.length} concepts generated using the Goldenberg–Mazursky–Solomon templates
             </p>
           </div>
@@ -381,7 +381,7 @@ export default function AdConceptGenerator() {
           </div>
 
           {/* Citation */}
-          <p className="mt-8 text-center text-xs text-white/20">
+          <p className="mt-8 text-center text-xs text-theme-text-20">
             Templates based on: Goldenberg, J., Mazursky, D., & Solomon, S. (1999).{' '}
             <em>The fundamental templates of quality ads.</em> Marketing Science, 18(3), 333–351.
           </p>

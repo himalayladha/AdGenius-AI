@@ -59,8 +59,8 @@ function CopyButton({ text, label }: { text: string; label: string }) {
 function Section({ title, content, copyLabel }: { title: string; content: string; copyLabel: string }) {
   return (
     <div className="mb-4">
-      <p className="text-[10px] font-semibold uppercase tracking-widest text-white/30 mb-1.5">{title}</p>
-      <p className="text-sm text-white/75 leading-relaxed">{content}</p>
+      <p className="text-[10px] font-semibold uppercase tracking-widest text-theme-text-30 mb-1.5">{title}</p>
+      <p className="text-sm text-theme-text-75 leading-relaxed">{content}</p>
       <div className="mt-2 flex justify-end">
         <CopyButton text={content} label={copyLabel} />
       </div>
@@ -112,8 +112,8 @@ export default function AdConceptCard({ concept, formData, onRegenerate, icon: I
             <Icon size={18} className="text-black font-semibold" />
           </div>
           <div>
-            <p className="text-[10px] font-semibold uppercase tracking-widest text-white/30">Template</p>
-            <h3 className="text-sm font-bold text-white leading-tight font-[var(--font-space-grotesk)]">
+            <p className="text-[10px] font-semibold uppercase tracking-widest text-theme-text-30">Template</p>
+            <h3 className="text-sm font-bold text-theme-text-90 leading-tight font-[var(--font-space-grotesk)]">
               {concept.templateName}
             </h3>
           </div>
@@ -132,7 +132,7 @@ export default function AdConceptCard({ concept, formData, onRegenerate, icon: I
 
       {/* Template description (toggleable) */}
       {showDescription && template && (
-        <div className="mb-4 p-3 rounded-lg bg-white/[0.04] border border-white/[0.06] text-xs text-white/50 leading-relaxed fade-in-up">
+        <div className="mb-4 p-3 rounded-lg bg-theme-bg-04 border border-theme-border-06 text-xs text-theme-text-50 leading-relaxed fade-in-up">
           {template.shortDescription}
         </div>
       )}
@@ -157,8 +157,8 @@ export default function AdConceptCard({ concept, formData, onRegenerate, icon: I
         <>
           <div className="divider" />
           <div className="mb-3">
-            <p className="text-[10px] font-semibold uppercase tracking-widest text-white/30 mb-1.5">📣 Call to Action</p>
-            <p className="text-sm font-semibold text-white/90">{concept.callToAction}</p>
+            <p className="text-[10px] font-semibold uppercase tracking-widest text-theme-text-30 mb-1.5">📣 Call to Action</p>
+            <p className="text-sm font-semibold text-theme-text-90">{concept.callToAction}</p>
           </div>
         </>
       )}

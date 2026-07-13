@@ -1,4 +1,5 @@
 import AdConceptGenerator from "@/components/AdConceptGenerator";
+import ThemeToggle from "@/components/ThemeToggle";
 import { Sparkles, BookOpen, Award } from "lucide-react";
 
 const TEMPLATE_PILLS = [
@@ -18,7 +19,7 @@ export default function Home() {
 
       <div className="relative z-10 min-h-screen flex flex-col">
         {/* ─── Header ─────────────────────────────── */}
-        <header className="sticky top-0 z-50 border-b border-white/[0.06] backdrop-blur-xl bg-black/20">
+        <header className="sticky top-0 z-50 border-b border-theme-border-06 backdrop-blur-xl bg-black/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center">
@@ -28,9 +29,12 @@ export default function Home() {
                 AdGenius AI
               </span>
             </div>
-            <div className="hidden sm:flex items-center gap-2 text-xs text-white/30">
-              <Award size={12} />
-              Based on Goldenberg, Mazursky & Solomon (1999)
+            <div className="flex items-center gap-4">
+              <div className="hidden sm:flex items-center gap-2 text-xs text-theme-text-30">
+                <Award size={12} />
+                Based on Goldenberg, Mazursky & Solomon (1999)
+              </div>
+              <ThemeToggle />
             </div>
           </div>
         </header>
@@ -49,9 +53,9 @@ export default function Home() {
             Ad Concepts with AI
           </h1>
 
-          <p className="text-white/50 text-base sm:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+          <p className="text-theme-text-50 text-base sm:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
             Powered by the six fundamental creativity templates proven to appear in{" "}
-            <strong className="text-white/70">89% of award-winning ads</strong> — from the seminal
+            <strong className="text-theme-text-70">89% of award-winning ads</strong> — from the seminal
             Marketing Science research by Goldenberg, Mazursky & Solomon.
           </p>
 
@@ -73,16 +77,16 @@ export default function Home() {
         </main>
 
         {/* ─── Footer ─────────────────────────────── */}
-        <footer className="border-t border-white/[0.05] py-6">
+        <footer className="border-t border-theme-border-06 py-6">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-            <p className="text-xs text-white/20">
+            <p className="text-xs text-theme-text-20">
               © 2025 AdGenius AI
             </p>
-            <p className="text-xs text-white/20 text-center">
+            <p className="text-xs text-theme-text-20 text-center">
               Templates: Goldenberg, J., Mazursky, D., & Solomon, S. (1999).{" "}
               <em>Marketing Science</em>, 18(3), 333–351.
             </p>
-            <p className="text-xs text-white/20">
+            <p className="text-xs text-theme-text-20">
               Powered by Google Gemini
             </p>
           </div>

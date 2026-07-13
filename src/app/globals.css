@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+@theme {
+  --color-theme-text-20: var(--theme-text-20);
+  --color-theme-text-25: var(--theme-text-25);
+  --color-theme-text-30: var(--theme-text-30);
+  --color-theme-text-40: var(--theme-text-40);
+  --color-theme-text-50: var(--theme-text-50);
+  --color-theme-text-70: var(--theme-text-70);
+  --color-theme-text-75: var(--theme-text-75);
+  --color-theme-text-90: var(--theme-text-90);
+  --color-theme-border-06: var(--theme-border-06);
+  --color-theme-border-08: var(--theme-border-08);
+  --color-theme-bg-04: var(--theme-bg-04);
+}
+
 @layer base {
   :root {
     --background: 6 6 6;
@@ -12,6 +26,45 @@
     --accent-purple: 245 158 11; /* Tailwind amber-500 */
     --accent-blue: 217 119 6;    /* Tailwind amber-600 */
     --accent-cyan: 254 240 138;   /* Tailwind yellow-200 */
+
+    /* Theme opacity values (Dark mode) */
+    --theme-text-20: rgba(255, 255, 255, 0.2);
+    --theme-text-25: rgba(255, 255, 255, 0.25);
+    --theme-text-30: rgba(255, 255, 255, 0.3);
+    --theme-text-40: rgba(255, 255, 255, 0.4);
+    --theme-text-50: rgba(255, 255, 255, 0.5);
+    --theme-text-70: rgba(255, 255, 255, 0.7);
+    --theme-text-75: rgba(255, 255, 255, 0.75);
+    --theme-text-90: rgba(255, 255, 255, 0.9);
+    --theme-border-06: rgba(255, 255, 255, 0.06);
+    --theme-border-08: rgba(255, 255, 255, 0.08);
+    --theme-bg-04: rgba(255, 255, 255, 0.04);
+  }
+
+  :root[data-theme='light'] {
+    --background: 246 247 249;
+    --surface: 255 255 255;
+    --surface-2: 236 238 243;
+    --border: 202 138 4 / 0.12;
+    --text-primary: 22 22 25;
+    --text-secondary: 100 100 115;
+    --accent-violet: 217 119 6;  /* Tailwind amber-600/gold for light background contrast */
+    --accent-purple: 245 158 11; /* Tailwind amber-500 */
+    --accent-blue: 202 138 4;    /* Tailwind yellow-600 */
+    --accent-cyan: 234 179 8;    /* Tailwind yellow-500 */
+
+    /* Theme opacity values (Light mode) */
+    --theme-text-20: rgba(15, 15, 20, 0.25);
+    --theme-text-25: rgba(15, 15, 20, 0.32);
+    --theme-text-30: rgba(15, 15, 20, 0.4);
+    --theme-text-40: rgba(15, 15, 20, 0.5);
+    --theme-text-50: rgba(15, 15, 20, 0.6);
+    --theme-text-70: rgba(15, 15, 20, 0.75);
+    --theme-text-75: rgba(15, 15, 20, 0.8);
+    --theme-text-90: rgba(15, 15, 20, 0.92);
+    --theme-border-06: rgba(15, 15, 20, 0.08);
+    --theme-border-08: rgba(15, 15, 20, 0.1);
+    --theme-bg-04: rgba(15, 15, 20, 0.05);
   }
 }
 
@@ -32,6 +85,11 @@
     font-family: var(--font-inter), system-ui, sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  body *, header, footer, .glass, .concept-card, .btn-ghost, .btn-primary, .input-field {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   }
 
   /* Scrollbar */
