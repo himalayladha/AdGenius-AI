@@ -3,12 +3,12 @@ import ThemeToggle from "@/components/ThemeToggle";
 import { Sparkles, BookOpen, Award } from "lucide-react";
 
 const TEMPLATE_PILLS = [
-  { name: "Pictorial Analogy", styles: "bg-yellow-400/5 border-yellow-500/20 text-yellow-300" },
-  { name: "Extreme Situation", styles: "bg-amber-400/5 border-amber-400/20 text-amber-300" },
-  { name: "Consequences", styles: "bg-yellow-500/5 border-yellow-500/20 text-yellow-400" },
-  { name: "Competition", styles: "bg-amber-500/5 border-amber-500/20 text-amber-400" },
-  { name: "Interactive Experiment", styles: "bg-yellow-300/5 border-yellow-300/20 text-yellow-200" },
-  { name: "Dimensionality Alteration", styles: "bg-amber-300/5 border-amber-300/20 text-amber-200" },
+  { name: "Pictorial Analogy", styles: "bg-yellow-400/10 dark:bg-yellow-400/5 border-yellow-500/20 text-yellow-700 dark:text-yellow-300" },
+  { name: "Extreme Situation", styles: "bg-amber-400/10 dark:bg-amber-400/5 border-amber-400/20 text-amber-700 dark:text-amber-300" },
+  { name: "Consequences", styles: "bg-yellow-500/10 dark:bg-yellow-500/5 border-yellow-500/20 text-yellow-800 dark:text-yellow-400" },
+  { name: "Competition", styles: "bg-amber-500/10 dark:bg-amber-500/5 border-amber-500/20 text-amber-800 dark:text-amber-400" },
+  { name: "Interactive Experiment", styles: "bg-yellow-400/10 dark:bg-yellow-400/5 border-yellow-500/20 text-yellow-700 dark:text-yellow-300" },
+  { name: "Dimensionality Alteration", styles: "bg-amber-400/10 dark:bg-amber-400/5 border-amber-500/20 text-amber-700 dark:text-amber-300" },
 ];
 
 export default function Home() {
