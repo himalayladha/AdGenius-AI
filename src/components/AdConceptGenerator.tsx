@@ -57,17 +57,17 @@ function TypewriterLoader() {
     <div className="flex flex-col items-center gap-6 py-16">
       {/* Orbital spinner */}
       <div className="relative w-20 h-20">
-        <div className="absolute inset-0 rounded-full border-2 border-violet-500/20" />
-        <div className="absolute inset-0 rounded-full border-t-2 border-violet-500 spinner" />
-        <div className="absolute inset-2 rounded-full border-2 border-indigo-400/20" />
-        <div className="absolute inset-2 rounded-full border-b-2 border-indigo-400 spinner" style={{ animationDuration: '1.2s', animationDirection: 'reverse' }} />
+        <div className="absolute inset-0 rounded-full border-2 border-yellow-500/20" />
+        <div className="absolute inset-0 rounded-full border-t-2 border-yellow-500 spinner" />
+        <div className="absolute inset-2 rounded-full border-2 border-amber-400/20" />
+        <div className="absolute inset-2 rounded-full border-b-2 border-amber-400 spinner" style={{ animationDuration: '1.2s', animationDirection: 'reverse' }} />
         <div className="absolute inset-0 flex items-center justify-center">
-          <Wand2 size={20} className="text-violet-400 pulse-glow" />
+          <Wand2 size={20} className="text-yellow-400 pulse-glow" />
         </div>
       </div>
 
       <div className="text-center">
-        <p className="text-lg font-medium text-violet-300 min-h-[28px] font-[var(--font-space-grotesk)]">
+        <p className="text-lg font-medium text-yellow-300 min-h-[28px] font-[var(--font-space-grotesk)]">
           {typed}
           <span className="typewriter-cursor" />
         </p>

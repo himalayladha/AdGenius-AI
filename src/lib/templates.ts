@@ -19,7 +19,7 @@ export const TEMPLATES: Template[] = [
     fullDescription:
       "The product (or one of its components) and a symbol of the message theme are unified through a visual linking operator — shape, color, or sound. In the Replacement version, a product replaces a symbol. In the Extreme Analogy version, the symbol is taken to an extreme.",
     icon: "Lightbulb",
-    gradient: "from-violet-500 to-purple-700",
+    gradient: "from-yellow-300 to-amber-500",
     promptGuidance: `Use the Pictorial Analogy template. Either:
 - REPLACEMENT: An element from the product space (e.g. the product itself or a component) replaces a symbol that represents the message. The two are matched by shape, color, texture, or sound (e.g. Nike Air sneaker shaped like a fireman's sheet = protection/cushioning).
 - EXTREME ANALOGY: A symbol associated with the message is taken to an extreme or absurd degree to highlight the product's benefit.
@@ -32,7 +32,7 @@ Create a concept where a visual metaphor powerfully connects the product to its 
     fullDescription:
       "Presents situations that are unrealistic in order to enhance the prominence of key product attributes. Versions: Absurd Alternative (tongue-in-cheek ridiculous alternative to using the product), Extreme Attribute (attribute exaggerated to impossible proportions), Extreme Worth (value of product exaggerated unrealistically).",
     icon: "Zap",
-    gradient: "from-orange-500 to-red-600",
+    gradient: "from-amber-400 to-yellow-600",
     promptGuidance: `Use the Extreme Situation template. Choose one of:
 - ABSURD ALTERNATIVE: Humorously suggest that instead of using the product, the viewer could try some ridiculous alternative that achieves the same result. The absurdity must be obvious — "You don't have to buy our product, you could always..." (e.g., an old lady barking like a dog instead of using a security lock).
 - EXTREME ATTRIBUTE: Take the product's key attribute to a physically impossible or absurd extreme to prove how powerful it is (e.g., car speakers so loud they collapse a bridge).
@@ -46,7 +46,7 @@ The absurdity must be immediately recognizable to the viewer.`,
     fullDescription:
       "Indicates the implications of either executing or failing to execute the recommendation in the ad. Extreme Consequences version shows exaggerated results of using the product. Inverted Consequences version warns against NOT using it.",
     icon: "GitBranch",
-    gradient: "from-emerald-500 to-teal-600",
+    gradient: "from-yellow-500 to-amber-700",
     promptGuidance: `Use the Consequences template. Choose one of:
 - EXTREME CONSEQUENCES: Show an extreme, chain-reaction consequence of the product's key attribute being applied to the fullest extent. The result must be recognizably absurd but based on a real product fact (e.g., speakers so powerful that the vibrations collapse a bridge — still based on real vibration physics).
 - INVERTED CONSEQUENCES: Warn the viewer about what happens if they DON'T use the product. Show the negative consequence of NOT following the recommendation — the absence of the product leads to a clearly negative result (e.g., without vitamins, an energetic person can't get out of bed).
@@ -59,7 +59,7 @@ The consequence must feel inevitable given the product's attribute.`,
     fullDescription:
       "The product is subjected to competition with another product or event from a different class, where the competitor is expected to be superior. Versions: Attribute in Competition, Worth in Competition, Uncommon Use (product attribute solves an unexpected problem).",
     icon: "Trophy",
-    gradient: "from-amber-400 to-yellow-600",
+    gradient: "from-amber-300 to-yellow-500",
     promptGuidance: `Use the Competition template. Choose one of:
 - UNCOMMON USE: Show the product being used in a completely unintended context to solve an unexpected problem, demonstrating an attribute so powerful it transcends its original purpose (e.g., jeans strong enough to tow a car). Introduce ambiguity at first — don't reveal it's an ad for the product until the resolution.
 - ATTRIBUTE IN COMPETITION: The product's key attribute directly competes with something known to be superior in that dimension, and wins or holds its own (e.g., a car racing a bullet and keeping pace, demonstrating speed).
@@ -73,7 +73,7 @@ The key is surprise — the competitor is from a completely different class.`,
     fullDescription:
       "Induces realization of product benefits by requiring the viewer to engage in an interactive experience with the ad medium. Activation version requires physical action. Imaginary Experiment version asks the viewer to mentally simulate an experiment.",
     icon: "FlaskConical",
-    gradient: "from-cyan-500 to-blue-600",
+    gradient: "from-yellow-400 to-amber-600",
     promptGuidance: `Use the Interactive Experiment template. Choose one of:
 - ACTIVATION: Design an ad that requires the viewer to physically interact with the medium (a magazine, a screen, a billboard) to receive the message. The experiment must be executable immediately, and the result reveals a need or benefit in a compelling, undeniable way (e.g., scratch a black patch in a print ad — dandruff appears on your fingers, proving you need anti-dandruff shampoo). The result highlights a general NEED, not just the brand's quality.
 - IMAGINARY EXPERIMENT: Ask the viewer to mentally simulate an experiment or scenario. Guide them through an imaginative exercise that leads them to realize the product's benefit through their own reasoning.
@@ -86,7 +86,7 @@ The insight must feel like a personal discovery, not a claim.`,
     fullDescription:
       "Manipulates the dimension of the product in relation to its environment. Versions: New Parameter Connection (previously unrelated parameters linked), Multiplication (duplicating product, comparing copies), Division (splitting product into components), Time Leap (shifting scenario to past or future to highlight benefit).",
     icon: "Scaling",
-    gradient: "from-pink-500 to-rose-600",
+    gradient: "from-amber-500 to-yellow-700",
     promptGuidance: `Use the Dimensionality Alteration template. Choose one of:
 - TIME LEAP: Take an ordinary situation involving the product and shift it dramatically to the past or future. The new time frame must be relevant to the product's attribute and create an emotionally resonant or entertaining scenario (e.g., life insurance ad where the wife argues with her late husband at a seance about why he cancelled his policy).
 - NEW PARAMETER CONNECTION: Link two previously unrelated parameters to demonstrate the product's power (e.g., the speed of a new aircraft is demonstrated by showing the ocean shrinking in size).

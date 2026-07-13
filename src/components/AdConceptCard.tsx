@@ -13,21 +13,21 @@ type Props = {
 };
 
 const TEMPLATE_GRADIENTS: Record<string, string> = {
-  pictorial_analogy: 'from-violet-500 to-purple-700',
-  extreme_situation: 'from-orange-500 to-red-600',
-  consequences: 'from-emerald-500 to-teal-600',
-  competition: 'from-amber-400 to-yellow-600',
-  interactive_experiment: 'from-cyan-500 to-blue-600',
-  dimensionality_alteration: 'from-pink-500 to-rose-600',
+  pictorial_analogy: 'from-yellow-300 to-amber-500',
+  extreme_situation: 'from-amber-400 to-yellow-600',
+  consequences: 'from-yellow-500 to-amber-700',
+  competition: 'from-amber-300 to-yellow-500',
+  interactive_experiment: 'from-yellow-400 to-amber-600',
+  dimensionality_alteration: 'from-amber-500 to-yellow-700',
 };
 
 const TEMPLATE_BG_GLOW: Record<string, string> = {
-  pictorial_analogy: 'rgba(139,92,246,0.08)',
-  extreme_situation: 'rgba(249,115,22,0.08)',
-  consequences: 'rgba(16,185,129,0.08)',
-  competition: 'rgba(251,191,36,0.08)',
-  interactive_experiment: 'rgba(6,182,212,0.08)',
-  dimensionality_alteration: 'rgba(236,72,153,0.08)',
+  pictorial_analogy: 'rgba(253,224,71,0.05)',
+  extreme_situation: 'rgba(245,158,11,0.05)',
+  consequences: 'rgba(234,179,8,0.05)',
+  competition: 'rgba(252,211,77,0.05)',
+  interactive_experiment: 'rgba(250,204,21,0.05)',
+  dimensionality_alteration: 'rgba(217,119,6,0.05)',
 };
 
 function CopyButton({ text, label }: { text: string; label: string }) {
@@ -109,7 +109,7 @@ export default function AdConceptCard({ concept, formData, onRegenerate, icon: I
       <div className="flex items-start justify-between mb-5">
         <div className="flex items-center gap-3">
           <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${gradient} flex items-center justify-center flex-shrink-0 shadow-lg`}>
-            <Icon size={18} className="text-white" />
+            <Icon size={18} className="text-black font-semibold" />
           </div>
           <div>
             <p className="text-[10px] font-semibold uppercase tracking-widest text-white/30">Template</p>

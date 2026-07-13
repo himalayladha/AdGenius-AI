@@ -2,16 +2,16 @@
 
 @layer base {
   :root {
-    --background: 10 10 20;
-    --surface: 18 18 35;
-    --surface-2: 26 26 50;
-    --border: 255 255 255 / 0.08;
-    --text-primary: 240 240 255;
-    --text-secondary: 160 160 200;
-    --accent-violet: 139 92 246;
-    --accent-purple: 168 85 247;
-    --accent-blue: 59 130 246;
-    --accent-cyan: 6 182 212;
+    --background: 6 6 6;
+    --surface: 16 16 16;
+    --surface-2: 24 24 24;
+    --border: 250 204 21 / 0.08;
+    --text-primary: 245 245 245;
+    --text-secondary: 160 160 160;
+    --accent-violet: 250 204 21; /* Tailwind yellow-400 */
+    --accent-purple: 245 158 11; /* Tailwind amber-500 */
+    --accent-blue: 217 119 6;    /* Tailwind amber-600 */
+    --accent-cyan: 254 240 138;   /* Tailwind yellow-200 */
   }
 }
 
@@ -66,7 +66,7 @@
   left: -20%;
   width: 70%;
   height: 70%;
-  background: radial-gradient(ellipse, rgba(139, 92, 246, 0.12) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(250, 204, 21, 0.08) 0%, transparent 70%);
   animation: drift1 20s ease-in-out infinite alternate;
 }
 
@@ -77,7 +77,7 @@
   right: -10%;
   width: 60%;
   height: 60%;
-  background: radial-gradient(ellipse, rgba(59, 130, 246, 0.10) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(245, 158, 11, 0.06) 0%, transparent 70%);
   animation: drift2 25s ease-in-out infinite alternate;
 }
 
@@ -93,10 +93,10 @@
 
 /* ─── Glass Card ──────────────────────────────────── */
 .glass {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(250, 204, 21, 0.06);
 }
 
 .glass-hover {
@@ -104,15 +104,15 @@
 }
 
 .glass-hover:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(139, 92, 246, 0.3);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(250, 204, 21, 0.25);
   transform: translateY(-2px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(139, 92, 246, 0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(250, 204, 21, 0.12);
 }
 
 /* ─── Gradient Text ───────────────────────────────── */
 .gradient-text {
-  background: linear-gradient(135deg, #a78bfa 0%, #818cf8 40%, #38bdf8 100%);
+  background: linear-gradient(135deg, #fef08a 0%, #facc15 50%, #eab308 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -121,7 +121,7 @@
 /* ─── Gradient Border ─────────────────────────────── */
 .gradient-border {
   position: relative;
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.01);
   border-radius: 16px;
 }
 
@@ -130,7 +130,7 @@
   position: absolute;
   inset: -1px;
   border-radius: 17px;
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.4), rgba(59, 130, 246, 0.2), rgba(6, 182, 212, 0.3));
+  background: linear-gradient(135deg, rgba(250, 204, 21, 0.35), rgba(245, 158, 11, 0.15), rgba(202, 138, 4, 0.25));
   z-index: -1;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -178,12 +178,12 @@
   justify-content: center;
   gap: 8px;
   padding: 12px 28px;
-  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  background: linear-gradient(135deg, #facc15, #eab308);
   border: none;
   border-radius: 10px;
-  color: white;
+  color: #060606;
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
   font-family: var(--font-space-grotesk), sans-serif;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -196,7 +196,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  background: linear-gradient(135deg, #fef08a, #facc15);
   opacity: 0;
   transition: opacity 0.2s ease;
 }
@@ -207,7 +207,7 @@
 
 .btn-primary:hover:not(:disabled) {
   transform: translateY(-1px);
-  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.4);
+  box-shadow: 0 8px 24px rgba(250, 204, 21, 0.35);
 }
 
 .btn-primary:active:not(:disabled) {

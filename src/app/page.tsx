@@ -2,12 +2,12 @@ import AdConceptGenerator from "@/components/AdConceptGenerator";
 import { Sparkles, BookOpen, Award } from "lucide-react";
 
 const TEMPLATE_PILLS = [
-  { name: "Pictorial Analogy", color: "from-violet-500 to-purple-700" },
-  { name: "Extreme Situation", color: "from-orange-500 to-red-600" },
-  { name: "Consequences", color: "from-emerald-500 to-teal-600" },
-  { name: "Competition", color: "from-amber-400 to-yellow-600" },
-  { name: "Interactive Experiment", color: "from-cyan-500 to-blue-600" },
-  { name: "Dimensionality Alteration", color: "from-pink-500 to-rose-600" },
+  { name: "Pictorial Analogy", styles: "bg-yellow-400/5 border-yellow-500/20 text-yellow-300" },
+  { name: "Extreme Situation", styles: "bg-amber-400/5 border-amber-400/20 text-amber-300" },
+  { name: "Consequences", styles: "bg-yellow-500/5 border-yellow-500/20 text-yellow-400" },
+  { name: "Competition", styles: "bg-amber-500/5 border-amber-500/20 text-amber-400" },
+  { name: "Interactive Experiment", styles: "bg-yellow-300/5 border-yellow-300/20 text-yellow-200" },
+  { name: "Dimensionality Alteration", styles: "bg-amber-300/5 border-amber-300/20 text-amber-200" },
 ];
 
 export default function Home() {
@@ -21,8 +21,8 @@ export default function Home() {
         <header className="sticky top-0 z-50 border-b border-white/[0.06] backdrop-blur-xl bg-black/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center">
-                <Sparkles size={16} className="text-white" />
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center">
+                <Sparkles size={16} className="text-black font-semibold" />
               </div>
               <span className="text-lg font-bold font-[var(--font-space-grotesk)] gradient-text">
                 AdGenius AI
@@ -55,12 +55,11 @@ export default function Home() {
             Marketing Science research by Goldenberg, Mazursky & Solomon.
           </p>
 
-          {/* Template pills */}
           <div className="flex flex-wrap justify-center gap-2 mb-12">
             {TEMPLATE_PILLS.map((t) => (
               <span
                 key={t.name}
-                className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${t.color} text-white/90 shadow-sm`}
+                className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${t.styles} shadow-sm`}
               >
                 {t.name}
               </span>
