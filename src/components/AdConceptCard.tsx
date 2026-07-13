@@ -73,8 +73,8 @@ export default function AdConceptCard({ concept, formData, onRegenerate, icon: I
   const [showDescription, setShowDescription] = useState(false);
 
   const template = TEMPLATES.find((t) => t.key === concept.templateKey);
-  const gradient = TEMPLATE_GRADIENTS[concept.templateKey] ?? 'from-violet-500 to-purple-700';
-  const bgGlow = TEMPLATE_BG_GLOW[concept.templateKey] ?? 'rgba(139,92,246,0.08)';
+  const gradient = TEMPLATE_GRADIENTS[concept.templateKey] ?? 'from-yellow-300 to-amber-500';
+  const bgGlow = TEMPLATE_BG_GLOW[concept.templateKey] ?? 'rgba(250,204,21,0.05)';
 
   const handleRegenerate = useCallback(async () => {
     setIsRegenerating(true);

@@ -39,6 +39,15 @@
     --theme-border-06: rgba(255, 255, 255, 0.06);
     --theme-border-08: rgba(255, 255, 255, 0.08);
     --theme-bg-04: rgba(255, 255, 255, 0.04);
+
+    /* Glass components (Dark mode) */
+    --theme-glass-bg: rgba(255, 255, 255, 0.02);
+    --theme-glass-border: rgba(250, 204, 21, 0.06);
+    --theme-glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
+
+    /* Concept Card (Dark mode) */
+    --theme-card-bg: rgba(255, 255, 255, 0.025);
+    --theme-card-border: rgba(255, 255, 255, 0.07);
   }
 
   :root[data-theme='light'] {
@@ -65,6 +74,15 @@
     --theme-border-06: rgba(15, 15, 20, 0.08);
     --theme-border-08: rgba(15, 15, 20, 0.1);
     --theme-bg-04: rgba(15, 15, 20, 0.05);
+
+    /* Glass components (Light mode) */
+    --theme-glass-bg: rgba(255, 255, 255, 0.75);
+    --theme-glass-border: rgba(202, 138, 4, 0.15);
+    --theme-glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+
+    /* Concept Card (Light mode) */
+    --theme-card-bg: rgba(255, 255, 255, 0.65);
+    --theme-card-border: rgba(0, 0, 0, 0.08);
   }
 }
 
@@ -151,10 +169,11 @@
 
 /* ─── Glass Card ──────────────────────────────────── */
 .glass {
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--theme-glass-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(250, 204, 21, 0.06);
+  border: 1px solid var(--theme-glass-border);
+  box-shadow: var(--theme-glass-shadow);
 }
 
 .glass-hover {
@@ -162,10 +181,10 @@
 }
 
 .glass-hover:hover {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(250, 204, 21, 0.25);
+  background: var(--theme-glass-bg);
+  border-color: rgb(var(--accent-violet) / 0.3);
   transform: translateY(-2px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(250, 204, 21, 0.12);
+  box-shadow: var(--theme-glass-shadow), 0 20px 40px rgba(0, 0, 0, 0.15), 0 0 0 1px rgb(var(--accent-violet) / 0.2);
 }
 
 /* ─── Gradient Text ───────────────────────────────── */
@@ -201,8 +220,8 @@
 /* ─── Input Styles ────────────────────────────────── */
 .input-field {
   width: 100%;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--theme-bg-04);
+  border: 1px solid var(--theme-border-08);
   border-radius: 10px;
   padding: 10px 14px;
   color: rgb(var(--text-primary));
@@ -215,18 +234,18 @@
 }
 
 .input-field:focus {
-  border-color: rgba(139, 92, 246, 0.5);
-  background: rgba(139, 92, 246, 0.06);
-  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+  border-color: rgb(var(--accent-violet) / 0.5);
+  background: rgb(var(--accent-violet) / 0.04);
+  box-shadow: 0 0 0 3px rgb(var(--accent-violet) / 0.1);
 }
 
 .input-field::placeholder {
-  color: rgba(160, 160, 200, 0.4);
+  color: var(--theme-text-40);
 }
 
 .input-field option {
-  background: rgb(18, 18, 40);
-  color: rgb(240, 240, 255);
+  background: rgb(var(--surface));
+  color: rgb(var(--text-primary));
 }
 
 /* ─── Button Styles ───────────────────────────────── */
@@ -288,8 +307,8 @@
   justify-content: center;
   gap: 6px;
   padding: 7px 14px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--theme-bg-04);
+  border: 1px solid var(--theme-border-08);
   border-radius: 8px;
   color: rgb(var(--text-secondary));
   font-size: 0.82rem;
@@ -299,8 +318,8 @@
 }
 
 .btn-ghost:hover:not(:disabled) {
-  background: rgba(139, 92, 246, 0.12);
-  border-color: rgba(139, 92, 246, 0.3);
+  background: rgb(var(--accent-violet) / 0.12);
+  border-color: rgb(var(--accent-violet) / 0.3);
   color: rgb(var(--text-primary));
 }
 
@@ -314,7 +333,7 @@
   display: block;
   font-size: 0.8rem;
   font-weight: 500;
-  color: rgba(160, 160, 200, 0.9);
+  color: var(--theme-text-75);
   margin-bottom: 6px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -363,8 +382,8 @@
 
 /* ─── Concept Card ────────────────────────────────── */
 .concept-card {
-  background: rgba(255, 255, 255, 0.025);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: var(--theme-card-bg);
+  border: 1px solid var(--theme-card-border);
   border-radius: 16px;
   padding: 24px;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -379,15 +398,15 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.5), transparent);
+  background: linear-gradient(90deg, transparent, rgb(var(--accent-violet) / 0.5), transparent);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .concept-card:hover {
-  border-color: rgba(139, 92, 246, 0.2);
+  border-color: rgb(var(--accent-violet) / 0.2);
   transform: translateY(-4px);
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(139, 92, 246, 0.12);
+  box-shadow: var(--theme-glass-shadow), 0 24px 48px rgba(0, 0, 0, 0.18), 0 0 0 1px rgb(var(--accent-violet) / 0.15);
 }
 
 .concept-card:hover::after {
@@ -399,7 +418,7 @@
   display: inline-block;
   width: 2px;
   height: 1.1em;
-  background: rgb(139, 92, 246);
+  background: rgb(var(--accent-violet));
   margin-left: 2px;
   vertical-align: middle;
   animation: blink 0.8s step-end infinite;
@@ -466,12 +485,12 @@
   align-items: center;
   gap: 6px;
   padding: 4px 12px;
-  background: rgba(139, 92, 246, 0.1);
-  border: 1px solid rgba(139, 92, 246, 0.25);
+  background: rgb(var(--accent-violet) / 0.1);
+  border: 1px solid rgb(var(--accent-violet) / 0.25);
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 600;
-  color: rgba(167, 139, 250, 0.9);
+  color: rgb(var(--accent-violet) / 0.9);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
