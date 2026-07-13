@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AdGenius AI
+
+> Generate award-winning ad concepts using the six fundamental creativity templates from Goldenberg, Mazursky & Solomon's seminal 1999 Marketing Science research.
+
+![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
+![Google Gemini](https://img.shields.io/badge/Gemini-2.0_Flash-orange?logo=google)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4-38BDF8?logo=tailwindcss)
+
+## What It Does
+
+AdGenius AI takes your product details and generates **6 unique ad concepts** — one per creativity template — in parallel using Google Gemini AI. The templates are proven to appear in **89% of award-winning ads**.
+
+### The 6 Creativity Templates
+
+| Template | Core Mechanic |
+|----------|---------------|
+| 🔮 **Pictorial Analogy** | Product + symbol unified by shape, color, or sound |
+| ⚡ **Extreme Situation** | Benefit pushed to an absurd, unrealistic extreme |
+| 🌿 **Consequences** | Dramatic results of using — or not using — the product |
+| 🏆 **Competition** | Product competes with an unexpected opponent from a different class |
+| 🧪 **Interactive Experiment** | Viewer performs an action that reveals the product's benefit |
+| 📐 **Dimensionality Alteration** | Time leap, scale shift, or multiplication to reframe value |
+
+## Features
+
+- ⚡ **Parallel generation** — all 6 concepts generated simultaneously
+- 🔄 **Per-card Regenerate** — re-generate any single template without starting over
+- 📋 **Copy to clipboard** — copy any field or the full card
+- 🎨 **Premium dark UI** — glassmorphism, animated mesh background, micro-animations
+- 📱 **Responsive** — works on mobile, tablet, and desktop
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone and install
+
+```bash
+git clone https://github.com/YOUR_USERNAME/adgenius-ai.git
+cd adgenius-ai
+npm install
+```
+
+### 2. Add your Google Gemini API key
+
+Create a `.env.local` file in the project root:
+
+```env
+GOOGLE_GENAI_API_KEY=your_api_key_here
+```
+
+Get a free key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey).
+
+### 3. Run the dev server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework**: Next.js 16 (App Router)
+- **AI**: Google Gemini 2.0 Flash via `@google/generative-ai`
+- **Styling**: Tailwind CSS v4 + custom CSS
+- **Language**: TypeScript
+- **Fonts**: Inter + Space Grotesk (Google Fonts)
 
-## Learn More
+## Research Reference
 
-To learn more about Next.js, take a look at the following resources:
+> Goldenberg, J., Mazursky, D., & Solomon, S. (1999). **The fundamental templates of quality ads.** *Marketing Science*, 18(3), 333–351.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The AI prompts for each template are precisely engineered from the paper's formulations — including product space, symbols set, and linking operator mechanics — not just the template name.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
